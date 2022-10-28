@@ -1,0 +1,591 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	width: 960px;
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+.Main {
+	/*画面中央縦列の基本コード*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*文字の後ろに画像を入れる
+	『../』は外側のファイルを指定する際に使用*/
+	background-image: url(../img/mainbg.png);
+	/*画像の真ん中表示する*/
+	background-position: center;
+	/*画像全体を範囲に表示*/
+	background-size: cover;
+	/*文字の色を変える場合*/
+	color: white;
+	/*表示する縦幅*/
+	height: 300px;
+	/**/
+}
+
+.Main_text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Main_text h1 {
+	/*行と行のMarginがぶつかり合うときは大きい方に、
+	小さいほうが食われる（合体）らしい*/
+	margin-bottom: 40px;
+	font-size: 48px;
+}
+
+.Main_text p {
+	font-size: 36px;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+/*全箱*/
+.Mokuji {
+	/*左箱と右箱に影響を与えたいからここに
+	display: flex;がある。*/
+	display: flex;
+	height: 80px;
+	border: solid #efefef;
+}
+
+/*左箱*/
+.Mokuji_img {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 40%;
+}
+
+.Mokuji_img img {
+	/*  上下・左右 で余白を設定  */
+	/*  上・左右・下 で余白を設定   */
+	/*  上・右・下・左 で余白を設定   */
+	/* margin：要素の外側の余白を設定。 padding：要素の内側の余白を設定*/
+
+	margin: px;
+	padding: 16px;
+	/*ーーーーーーーーーーー*/
+	height: 76px;
+}
+
+/*右箱*/
+.Mokuji_text {
+	display: flex;
+	/*space-betweenは端に寄せつつ均等に並べる
+	均等に余白をつくって並べる space-evenly*/
+	justify-content: space-evenly;
+	align-items: center;
+	width: 60%;
+	font-size: 21px;
+}
+
+.Mokuji_text p {
+	font-size: 21px;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+.About_text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.About_text h2 {
+	margin: 120px 0px 24px;
+	font-size: 24px;
+	color: #ffd61a;
+}
+
+.Yohaku {
+	margin: 64px 0px 40px;
+}
+
+.Yohaku2 {
+	margin: 40px 0px;
+}
+
+.Yohaku3 {
+	margin-bottom: 80px;
+}
+
+.About_img img {
+	width: 100%;
+}
+
+/*アバウトとりあえず終わり。次のはコース同じのが三つだから一つ作ってコピー*/
+
+.Course_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Course_title h2 {
+	margin: 64px 0px 12px;
+}
+
+.Course_title_Pend {
+	margin-bottom: 64px;
+}
+
+/*Course_topに対してやる作業はほぼMokujiと同じだと予想できる。*/
+/*似てるけど違うかも？頭がよく回ってないかも。
+でも箱もしくは付箋というイメージは固い。*/
+
+.Course_top {
+	display: flex;
+}
+
+/*.Course_top_imgとCourse_top_textそれぞれにwidth50%以外に方法がないか？*/
+/*↑急がば回れ*/
+
+/* 上手に半分に分割出来ず、一度無効化。
+
+.Course_top_img{
+	width: 50px←理由判明！ここpxでなく％指定ね。;
+}
+
+.Course_top_text{
+	width: 50px←理由判明！ここpxでなく％指定ね。;
+}
+*/
+.Course_top_img {
+	width: 50%
+}
+
+.Course_top_img img {
+	width: 100%;
+}
+
+.Course_top_text {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Course_top_section {
+	display: flex;
+	/*justify-content: center;
+	align-items: center;*/
+	/*ここ必要なし*/
+	flex-direction: column;
+	/*margin-right: 48px;
+	右と左を間違えた。おかc時は検証！/*/
+	margin-left: 48px;
+	/*結局必要....*/
+	margin-right: 48px;
+}
+
+/*.Course_top_section{
+	margin-top: 40px;  ↑.Course_top_section p 最後のp忘れ
+}*/
+.Course_top_section p {
+	margin-top: 40px;
+}
+
+.Course_top_section h2 {
+	color: #222222;
+}
+
+/*.Course_topは終わり。なので反転だけ調べてコピ
+flex-direction: column-reverse;縦並び逆順 ←縦？横でした
+（１敗）*/
+
+.Course_middle {
+	display: flex;
+	/* 横並び逆順 */
+	flex-direction: row-reverse;
+}
+
+.Course_middle_img {
+	width: 50%
+}
+
+.Course_middle_img img {
+	width: 100%;
+}
+
+.Course_middle_text {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Course_middle_section {
+	display: flex;
+	flex-direction: column;
+	margin-left: 48px;
+	margin-right: 48px;
+}
+
+.Course_middle_section p {
+	margin-top: 40px;
+}
+
+.Course_middle_section h2 {
+	color: #222222;
+}
+
+.Course_bottom {
+	display: flex;
+}
+
+.Course_bottom_img {
+	width: 50%
+}
+
+.Course_bottom_img img {
+	width: 100%;
+}
+
+.Course_bottom_text {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Course_bottom_section {
+	display: flex;
+	flex-direction: column;
+	margin-left: 48px;
+	margin-right: 48px;
+}
+
+.Course_bottom_section p {
+	margin-top: 40px;
+}
+
+.Course_bottom_section h2 {
+	color: #222222;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+.NEWS {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.News_top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin: 64px 0px;
+}
+
+.News_top h2 {
+	margin-bottom: 10px;
+	color: #ffd61a;
+}
+
+.News_middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 80%;
+}
+
+.News_middle_right_text div,
+.News_middle_center_text div,
+.News_middle_left_text div {
+	margin: 30px 0px 24px;
+}
+
+.News_middle_center {
+	margin: 0px 32px;
+}
+
+.News_middle_right_img img,
+.News_middle_center_img img,
+.News_middle_left_img img {
+	width: 100%;
+}
+
+.News_bottom {
+	margin: 56px 0px 48px;
+}
+
+.News_bottom_backcolor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 60px;
+	background-color: #ffd61a;
+	background-position: center;
+}
+
+.News_bottom_backcolor h2 {
+	color: #fafafa;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+.Access {
+	background-color: #fafafa;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Access_Top_title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 64px;
+	margin-bottom: 24px;
+}
+
+.Access_Top_title div {
+	margin-top: 24px;
+}
+
+.Access_img {
+	width: 100%;
+	height: 56.25%;
+}
+
+.Access_bottom {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 80px;
+}
+
+.Access_bottom_text {
+	margin-bottom: 80px;
+}
+
+.Access_bottom_text_right {
+	margin-right: 48px;
+}
+
+.Access_bottom_text_right p,
+.Access_bottom_text_left p {
+	margin-bottom: 24px;
+}
+
+.Access_img {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+	/* 縦横比の指定 */
+	overflow: hidden;
+	margin: 64px 0px;
+}
+
+.Access_img iframe,
+.Access_img object,
+.Access_img embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+.Contact_top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.Contact_top h2 {
+	margin-top: 60px;
+	margin-bottom: 32px;
+}
+
+.Contact_top p1 {
+	margin-bottom: 80px;
+}
+
+.Contact_top p2 {
+	margin-bottom: 32px;
+}
+
+.Contact_middle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.Contact_middle_R_T,
+.Contact_middle_L_T {
+	display: flex;
+}
+
+.Contact_middle_R_T p2 {
+	width: 112px;
+}
+
+.Contact_middle_R_T p2,
+.Contact_middle_R_T p {
+	margin-right: 120px;
+}
+
+.Contact_middle_L_T p2 {
+	margin-right: 40px;
+}
+
+.Contact_middle_L_T p {
+	margin-right: 170px;
+}
+
+.test2 {
+	display: flex;
+	flex-direction: column;
+}
+
+.test {
+	margin-bottom: 24px;
+}
+
+.Contact_middle_L_T {
+	margin-bottom: 8px;
+}
+
+.Contact_bottom {
+	margin: 56px 0px 48px;
+}
+
+.Contact_bottom_backcolor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 298px;
+	height: 54px;
+	background-color: #ffd61a;
+	background-position: center;
+}
+
+.Contact_bottom_backcolor {
+	color: #fafafa;
+	font-size: 18px;
+}
+
+input[type="text"] {
+	width: 328px;
+	height: 36px;
+	font-size: 0.95em;
+	margin-bottom: 24px;
+	padding: 0.5em;
+	border: solid 2px #bfbfbf;
+	border-radius: 4px;
+}
+
+input[type="textbox"] {
+	border: solid 2px #bfbfbf;
+	width: 328px;
+	height: 108px;
+}
+
+input[type="checkbox"] {
+	width: 24px;
+	height: 24px;
+	background-color: red;
+}
+
+/**/
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+
+.Last {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #707070;
+	width: 100%;
+	height: 92px;
+}
+
+.Last p {
+	font-size: 18px;
+	color: white;
+}
+
+.Botton_I {
+	background-color: #707070;
+	height: 60px;
+	width: 60px;
+	margin-right: 60px;
+}
+
+.B {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+/*----------TRY---------------------------*/
+
+/*----------TRY---------------------------*/
+
+
+/*
+---------------------*/
+
+/*
+---------------------*/
